@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Médiation, savoir et transformation des interactions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --color-bg: #ffffff;
+      --color-text: #1a1a1a;
+      --color-secondary: #666666;
+      --color-border: #e5e5e5;
+      --color-hover: #1e3a5f;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', Helvetica, Arial, sans-serif;
+    }
+
+    html {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Navigation ── */
+
+    nav {
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.6rem 8vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 0;
+      animation: fadeDown 0.6s ease 0.1s forwards;
+    }
+
+    .nav-logo {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-text);
+      text-decoration: none;
+    }
+
+    .nav-logo:hover {
+      color: var(--color-hover);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2.4rem;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 1px;
+      background: var(--color-hover);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-hover);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a:focus-visible {
+      outline: 2px solid var(--color-hover);
+      outline-offset: 4px;
+      border-radius: 1px;
+    }
+
+    /* ── Hero ── */
+
+    .hero {
+      flex: 1;
+      padding: 10vw 8vw 6vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(4.5rem, 11vw, 13rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      color: var(--color-text);
+      max-width: 100%;
+      opacity: 0;
+      animation: revealUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+    }
+
+    .hero-title .line {
+      display: block;
+      overflow: hidden;
+    }
+
+    .hero-title .line span {
+      display: block;
+      transform: translateY(110%);
+      animation: slideUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .hero-title .line:nth-child(1) span { animation-delay: 0.4s; }
+    .hero-title .line:nth-child(2) span { animation-delay: 0.52s; }
+    .hero-title .line:nth-child(3) span { animation-delay: 0.64s; }
+
+    .hero-title .line:nth-child(3) {
+      text-align: right;
+    }
+
+    .hero-divider {
+      width: 2rem;
+      height: 1px;
+      background: var(--color-border);
+      margin: clamp(2rem, 4vw, 4rem) 0 clamp(1.4rem, 2.5vw, 2.5rem);
+      opacity: 0;
+      animation: fadeIn 0.6s ease 0.9s forwards;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      max-width: 480px;
+      line-height: 1.9;
+      opacity: 0;
+      animation: fadeIn 0.7s ease 1s forwards;
+    }
+
+    /* ── Scroll indicator ── */
+
+    .scroll-hint {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 2rem 8vw 3rem;
+      opacity: 0;
+      animation: fadeIn 0.6s ease 1.3s forwards;
+    }
+
+    .scroll-hint-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .scroll-hint-label {
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #aaaaaa;
+    }
+
+    .scroll-hint-arrow {
+      font-size: 14px;
+      color: #aaaaaa;
+      animation: pulse 2.5s ease-in-out 1.5s infinite;
+      line-height: 1;
+    }
+
+    /* ── Animations ── */
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes revealUp {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(110%); }
+      to   { transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: translateY(0); }
+      50%       { opacity: 0.8; transform: translateY(3px); }
+    }
+
+    /* ── Responsive ── */
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 1.2rem 6vw;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.6rem;
+      }
+
+      .nav-links {
+        gap: 1.6rem;
+      }
+
+      .hero {
+        padding: 10vw 6vw 8vw;
+      }
+
+      .hero-title {
+        letter-spacing: -0.02em;
+      }
+
+      .scroll-hint {
+        padding: 1.5rem 6vw 2.5rem;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding: 12vw 6vw 10vw;
+      }
+
+      .hero-title {
+        font-size: clamp(2.6rem, 10vw, 4.5rem);
+      }
+    }
+
+    /* ── Reduced motion ── */
+
+    @media (prefers-reduced-motion: reduce) {
+      nav,
+      .hero-title,
+      .hero-title .line span,
+      .hero-divider,
+      .hero-subtitle,
+      .scroll-hint {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a class="nav-logo" href="#">Ibrahim Boukernafaa</a>
+    <ul class="nav-links">
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">Recherche</a></li>
+      <li><a href="#">Enseignement</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <main class="hero" role="main">
+    <h1 class="hero-title" aria-label="Médiation, savoir et transformation des interactions">
+      <span class="line"><span>Médiation, savoir</span></span>
+      <span class="line"><span>et transformation</span></span>
+      <span class="line"><span>des interactions</span></span>
+    </h1>
+
+    <div class="hero-divider" aria-hidden="true"></div>
+
+    <p class="hero-subtitle">
+      Nous sommes au service du savoir.<br>
+      Le savoir est une exigence,<br>
+      une médiation et une responsabilité.
+    </p>
+  </main>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-hint-inner">
+      <span class="scroll-hint-label">Défiler</span>
+      <span class="scroll-hint-arrow">↓</span>
+    </div>
+  </div>
+
+</body>
+</html>
