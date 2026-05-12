@@ -33,7 +33,7 @@ defineProps({
 
 <style scoped>
 .section {
-  padding: 8vw 0;
+  padding: 4vw 0;
 }
 
 .section-header {
@@ -51,7 +51,7 @@ defineProps({
 }
 
 h2 {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   line-height: 1.15;
@@ -94,7 +94,7 @@ h2 {
 }
 
 .manifesto-body p {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   line-height: 1.6;
   color: #1a1a1a;
@@ -119,7 +119,7 @@ h2 {
     font-size: 1.4rem;
   }
   .manifesto-body p {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   .manifesto {
     padding: 0 2rem;
@@ -128,13 +128,13 @@ h2 {
 
 @media (max-width: 480px) {
   .section {
-    padding: 8vw 0;
+    padding: 4vw 0;
   }
   h2 {
     font-size: 1.2rem;
   }
   .manifesto-body p {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 }
 </style>

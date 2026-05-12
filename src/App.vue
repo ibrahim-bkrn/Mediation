@@ -2,16 +2,39 @@
   <div id="app" class="app">
     <Header />
     <Hero :data="content.hero" />
+
+    <nav class="tabs-nav" role="tablist" aria-label="Sections du site">
+      <button
+        v-for="tab in tabs"
+        :key="tab.id"
+        class="tab-btn"
+        :class="{ active: activeTab === tab.id }"
+        @click="activeTab = tab.id"
+        role="tab"
+        :aria-selected="activeTab === tab.id"
+      >
+        {{ tab.label }}
+      </button>
+    </nav>
+
     <main class="main-content">
-      <PositionnementSection :data="content.positionnement" />
-      <AxesSection :data="content.axes" />
-      <DemarcheSection :data="content.demarche" />
-      <PostureSection :data="content.posture" />
-      <EnseignementSection :data="content.enseignement" />
-      <ApplicationsSection :data="content.applications" />
-      <ManifestoSection :data="content.manifesto" />
-      <ContactSection :data="content.contact" />
+      <Transition name="tab-fade" mode="out-in">
+        <div :key="activeTab" class="tab-panel">
+          <PositionnementSection v-if="activeTab === 'positionnement'" :data="content.positionnement" />
+          <AxesSection v-else-if="activeTab === 'axes'" :data="content.axes" />
+          <DemarcheSection v-else-if="activeTab === 'demarche'" :data="content.demarche" />
+          <PostureSection v-else-if="activeTab === 'posture'" :data="content.posture" />
+          <EnseignementSection v-else-if="activeTab === 'enseignement'" :data="content.enseignement" />
+          <ApplicationsSection v-else-if="activeTab === 'applications'" :data="content.applications" />
+          <ManifestoSection v-else-if="activeTab === 'manifesto'" :data="content.manifesto" />
+        </div>
+      </Transition>
     </main>
+
+    <div class="contact-wrapper">
+      <ContactSection :data="content.contact" />
+    </div>
+
     <Footer />
   </div>
 </template>
@@ -29,6 +52,18 @@ import ApplicationsSection from './components/ApplicationsSection.vue'
 import ManifestoSection from './components/ManifestoSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import Footer from './components/Footer.vue'
+
+const activeTab = ref('positionnement')
+
+const tabs = [
+  { id: 'positionnement', label: 'Positionnement' },
+  { id: 'axes', label: 'Axes de recherche' },
+  { id: 'demarche', label: 'Démarche' },
+  { id: 'posture', label: 'Posture' },
+  { id: 'enseignement', label: 'Enseignement' },
+  { id: 'applications', label: 'Applications' },
+  { id: 'manifesto', label: 'Manifeste' },
+]
 
 const content = ref({
   hero: {
@@ -157,7 +192,61 @@ Nous sommes au service du savoir.`
 #app {
   background: #ffffff;
   color: #1a1a1a;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tabs-nav {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 8vw;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 1.2rem 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #1e3a5f;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+.tab-btn:hover {
+  color: #1a1a1a;
+}
+
+.tab-btn.active {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.tab-btn.active::after {
+  transform: scaleX(1);
 }
 
 .main-content {
@@ -166,14 +255,45 @@ Nous sommes au service du savoir.`
   padding: 0 2rem;
 }
 
+.tab-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.tab-fade-enter-active,
+.tab-fade-leave-active {
+  transition: opacity 0.18s ease;
+}
+
+.tab-fade-enter-from,
+.tab-fade-leave-to {
+  opacity: 0;
+}
+
 @media (max-width: 768px) {
   .main-content {
     padding: 0 1.5rem;
   }
+
+  .tabs-nav {
+    padding: 0 6vw;
+  }
+}
+
+.contact-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  border-top: 1px solid #e5e5e5;
 }
 
 @media (max-width: 480px) {
   .main-content {
+    padding: 0 1rem;
+  }
+
+  .contact-wrapper {
     padding: 0 1rem;
   }
 }

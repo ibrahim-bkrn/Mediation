@@ -25,6 +25,10 @@ defineProps({
 
 <style scoped>
 
+.section {
+  padding: 4vw 0;
+}
+
 .section-header {
   margin-bottom: clamp(2rem, 4vw, 4rem);
 }
@@ -40,7 +44,7 @@ defineProps({
 }
 
 h2 {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   line-height: 1.15;
@@ -60,7 +64,7 @@ h2 {
 }
 
 .section-body p {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.85;
   color: #1a1a1a;
   margin-bottom: 1.8rem;
@@ -87,7 +91,7 @@ h2 {
     font-size: 1.4rem;
   }
   .section-body p {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   h2{
@@ -97,13 +101,13 @@ h2 {
 
 @media (max-width: 480px) {
   .section {
-    padding: 8vw 0;
+    padding: 4vw 0;
   }
   h2 {
     font-size: 1.2rem;
   }
   .section-body p {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 }
 </style>

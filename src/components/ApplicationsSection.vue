@@ -32,7 +32,7 @@ defineProps({
 
 <style scoped>
 .section {
-  padding: 8vw 0;
+  padding: 4vw 0;
 }
 
 .section-header {
@@ -50,7 +50,7 @@ defineProps({
 }
 
 h2 {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   line-height: 1.15;
@@ -65,7 +65,7 @@ h2 {
 }
 
 .intro {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.85;
   color: #1a1a1a;
   max-width: 840px;
@@ -100,7 +100,7 @@ h2 {
 }
 
 .intervention-name {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   font-weight: 600;
   color: #1a1a1a;
@@ -114,7 +114,7 @@ h2 {
 }
 
 .conclusion {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.85;
   color: #666666;
   max-width: 840px;
@@ -129,23 +129,23 @@ h2 {
   }
   .intro,
   .conclusion {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   .intervention-name {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 }
 
 @media (max-width: 480px) {
   .section {
-    padding: 8vw 0;
+    padding: 4vw 0;
   }
   h2 {
     font-size: 1.2rem;
   }
   .intro,
   .conclusion {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 }
 </style>

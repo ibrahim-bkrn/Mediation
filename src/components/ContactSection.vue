@@ -38,7 +38,7 @@ h2 {
 }
 
 .intro {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: #666666;
   margin-bottom: 2rem;
   line-height: 1.8;
@@ -49,11 +49,11 @@ h2 {
   border: 1px solid #1a1a1a;
   background: transparent;
   color: #1a1a1a;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   cursor: pointer;
   border-radius: 0;
   transition: all 0.3s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .contact-button:hover {
@@ -80,7 +80,7 @@ h2 {
     font-size: 1.4rem;
   }
   .intro {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 }
 
@@ -92,7 +92,7 @@ h2 {
     font-size: 1.2rem;
   }
   .intro {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 }
 </style>

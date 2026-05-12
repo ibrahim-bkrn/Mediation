@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&family=Libre+Baskerville:wght@400;700&family=Ranade:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap');
 
 * {
   margin: 0;
@@ -9,7 +9,7 @@
 html, body {
   background: #ffffff;
   color: #1a1a1a;
-  font-family: 'Ranade', 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.8;
   font-size: 16px;
 }

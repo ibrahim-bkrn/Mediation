@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p>© 2024. Tous droits réservés.</p>
+    <p>© 2026. Tous droits réservés.</p>
   </footer>
 </template>
 
@@ -10,7 +10,7 @@
   text-align: center;
   padding: 3rem 2rem;
   color: #666666;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   margin-top: 6rem;
 }
 

@@ -26,7 +26,7 @@ defineProps({
 
 <style scoped>
 .section {
-  padding: 8vw 0;
+  padding: 4vw 0;
 }
 
 .section-header {
@@ -44,7 +44,7 @@ defineProps({
 }
 
 h2 {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   line-height: 1.15;
@@ -76,7 +76,7 @@ h2 {
 }
 
 .axis-title {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   font-weight: 600;
   line-height: 1.3;
@@ -84,13 +84,13 @@ h2 {
 }
 
 .axis-arrow {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #aaaaaa;
   flex-shrink: 0;
 }
 
 .axis-description {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: #666666;
   max-width: 860px;
@@ -104,19 +104,19 @@ h2 {
     font-size: 1.4rem;
   }
   .axis-description {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 }
 
 @media (max-width: 480px) {
   .section {
-    padding: 8vw 0;
+    padding: 4vw 0;
   }
   h2 {
     font-size: 1.2rem;
   }
   .axis-description {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 }
 </style>

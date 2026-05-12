@@ -1,27 +1,14 @@
 <template>
   <header class="header">
-    <nav class="nav">
-      <a href="#hero" @click="smoothScroll" class="nav-logo">Médiation & Savoir</a>
-      <ul class="nav-links">
-        <li><a href="#hero" @click="smoothScroll">Accueil</a></li>
-        <li><a href="#recherche" @click="smoothScroll">Recherche</a></li>
-        <li><a href="#enseignement" @click="smoothScroll">Enseignement</a></li>
-        <li><a href="#contact" @click="smoothScroll">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="nav">
+      <div class="nav-identity">
+        <span class="nav-identity-name">HABBOUB KAJIOU Imane</span>
+        <span class="nav-identity-title">Enseignante chercheuse</span>
+      </div>
+      <a href="#hero" class="nav-logo">Deviens.</a>
+    </div>
   </header>
 </template>
-
-<script setup>
-const smoothScroll = (event) => {
-  event.preventDefault()
-  const target = event.currentTarget.getAttribute('href')
-  const element = document.querySelector(target)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
-  }
-}
-</script>
 
 <style scoped>
 .header {
@@ -30,63 +17,49 @@ const smoothScroll = (event) => {
 }
 
 .nav {
-  padding: 1.6rem 8vw;
+  padding: 1.4rem 8vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .nav-logo {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: #1a1a1a;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .nav-logo:hover {
-  color: #1e3a5f;
+  opacity: 0.6;
 }
 
-.nav-links {
-  list-style: none;
+.nav-identity {
   display: flex;
-  gap: 2.4rem;
-  padding: 0;
-  margin: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
 }
 
-.nav-links a {
-  font-size: 13px;
-  font-weight: 400;
+.nav-identity-name {
+  font-size: 15px;
+  font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #666666;
-  text-decoration: none;
-  transition: color 0.2s ease;
-  position: relative;
-  cursor: pointer;
+  color: #1a1a1a;
+  line-height: 1;
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 1px;
-  background: #1e3a5f;
-  transition: width 0.25s ease;
-}
-
-.nav-links a:hover {
-  color: #1e3a5f;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
+.nav-identity-title {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888888;
+  line-height: 1;
 }
 
 @keyframes fadeDown {
@@ -97,11 +70,6 @@ const smoothScroll = (event) => {
 @media (max-width: 768px) {
   .nav {
     padding: 1.2rem 6vw;
-    gap: 1.6rem;
-  }
-
-  .nav-links {
-    gap: 1.6rem;
   }
 }
 
@@ -109,12 +77,11 @@ const smoothScroll = (event) => {
   .nav {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
-  .nav-links {
-    gap: 1.2rem;
-    flex-wrap: wrap;
+  .nav-identity {
+    align-items: flex-start;
   }
 }
 </style>
