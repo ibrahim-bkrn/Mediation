@@ -92,14 +92,13 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  h2 { font-size: 1.4rem; }
   .manifesto { padding: 0 1rem; }
   .manifesto-body { padding: 0 0.5rem; }
   .manifesto-body p { font-size: 1.2rem; }
 }
 
 @media (max-width: 480px) {
-  h2 { font-size: 1.2rem; }
+  h2 { font-size: 1.6rem; }
   .manifesto { padding: 0; }
   .manifesto-body { padding: 0; }
   .manifesto-body p { font-size: 1.05rem; }

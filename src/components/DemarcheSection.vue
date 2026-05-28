@@ -91,12 +91,11 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  h2 { font-size: 1.4rem; }
   .section-body p { font-size: 1.05rem; }
 }
 
 @media (max-width: 480px) {
-  h2 { font-size: 1.2rem; }
+  h2 { font-size: 1.6rem; }
   .section-body p { font-size: 1rem; }
 }
 </style>

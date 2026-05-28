@@ -147,13 +147,12 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  h2 { font-size: 1.4rem; }
   .axis-title { font-size: 1rem; }
   .axis-description { font-size: 0.95rem; }
 }
 
 @media (max-width: 480px) {
-  h2 { font-size: 1.2rem; }
+  h2 { font-size: 1.6rem; }
   .axis-title { font-size: 0.95rem; }
   .axis-item { padding: 1.2rem 0; }
 }

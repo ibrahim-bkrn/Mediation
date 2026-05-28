@@ -18,7 +18,7 @@
 
     <div class="hero-identity" aria-label="Identité de l'enseignante">
       <div class="hero-identity-name-row">
-        <span class="hero-identity-name">HABBOUB KAJIOU Imane <span class="hero-identity-sep" aria-hidden="true">—</span></span>
+        <span class="hero-identity-name">Imane HABBOUB KAJIOU</span>
         <svg class="hero-deco-name" aria-hidden="true" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
           <circle cx="20" cy="20" r="2" fill="#1a1a1a" opacity="0.3"/>
           <circle cx="60" cy="10" r="1.5" fill="#1a1a1a" opacity="0.25"/>
@@ -271,6 +271,13 @@ defineProps({
 
   .hero-subtitle {
     text-align: left;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-cta {
+    font-size: 11px;
+    letter-spacing: 0.12em;
   }
 
   .hero-intro {
@@ -298,6 +305,17 @@ defineProps({
 
   .hero-subtitle-wrapper {
     margin-top: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  .hero-subtitle {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+
+  .hero-cta {
+    font-size: 10px;
+    padding: 0.6rem 1.2rem;
+    letter-spacing: 0.1em;
   }
 
   .hero-intro {

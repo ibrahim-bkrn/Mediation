@@ -116,12 +116,11 @@ h2 {
     border-right: none;
     padding-right: 0.5rem;
   }
-  h2 { font-size: 1.4rem; }
   .subtitle { font-size: 1.05rem; }
 }
 
 @media (max-width: 480px) {
-  h2 { font-size: 1.2rem; }
+  h2 { font-size: 1.6rem; }
   .discipline-name { font-size: 1rem; }
   .subtitle { font-size: 1rem; }
 }
