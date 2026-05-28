@@ -22,7 +22,7 @@ const handleContact = () => {
 
 <style scoped>
 .section {
-  margin: 6rem 0;
+  margin: clamp(3rem, 6vw, 6rem) 0;
   padding: 3rem 0;
   animation: fadeIn 0.6s ease-out forwards;
   opacity: 0;
@@ -40,8 +40,8 @@ const handleContact = () => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
+  width: min(500px, 90vw);
+  height: min(500px, 90vw);
   pointer-events: none;
   z-index: 0;
 }
@@ -53,7 +53,7 @@ h2, .intro, .contact-button {
 
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.3rem;
+  font-size: clamp(1.4rem, 3.5vw, 2.3rem);
   font-weight: 700;
   margin-bottom: 1rem;
   letter-spacing: -0.01em;

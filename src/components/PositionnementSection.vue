@@ -115,11 +115,8 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .section {
-    padding: 5vw 0;
-  }
   h2 {
-    font-size: 20px;
+    font-size: 1.4rem;
   }
   .section-body p {
     font-size: 1.05rem;
@@ -127,14 +124,11 @@ h2 {
 }
 
 @media (max-width: 480px) {
-  .section {
-    padding: 7vw 0;
-  }
   h2 {
     font-size: 1.2rem;
   }
   .section-body p {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 }
 </style>

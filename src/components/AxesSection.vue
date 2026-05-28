@@ -141,8 +141,20 @@ h2 {
 
 @media (max-width: 900px) {
   .section-layout { grid-template-columns: 1fr; }
-  .axes-body { grid-template-columns: 1fr; }
+  .axes-body { grid-template-columns: 1fr; gap: 0; }
   .axes-visual { display: none; }
   .axes-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  h2 { font-size: 1.4rem; }
+  .axis-title { font-size: 1rem; }
+  .axis-description { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+  h2 { font-size: 1.2rem; }
+  .axis-title { font-size: 0.95rem; }
+  .axis-item { padding: 1.2rem 0; }
 }
 </style>

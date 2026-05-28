@@ -176,7 +176,7 @@ defineProps({
 }
 
 .hero-intro {
-  margin-top: 130px;
+  margin-top: clamp(2.5rem, 7vw, 8rem);
   max-width: 1300px;
   font-size: 1.4rem;
   line-height: 1.8;
@@ -254,19 +254,28 @@ defineProps({
     letter-spacing: -0.02em;
   }
 
-
-  .hero-deco--tr {
-    width: 300px;
-    height: 300px;
-    top: -30px;
-    right: -30px;
-  }
-
+  .hero-deco--tr,
   .hero-deco--bl {
-    width: 220px;
-    height: 220px;
+    display: none;
   }
 
+  .hero-deco-name {
+    display: none;
+  }
+
+  .hero-subtitle-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-subtitle {
+    text-align: left;
+  }
+
+  .hero-intro {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -287,9 +296,12 @@ defineProps({
     letter-spacing: 0.08em;
   }
 
-  .hero-deco--tr,
-  .hero-deco--bl {
-    display: none;
+  .hero-subtitle-wrapper {
+    margin-top: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  .hero-intro {
+    font-size: 1rem;
   }
 }
 

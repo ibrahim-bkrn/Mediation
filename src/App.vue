@@ -287,6 +287,13 @@ Nous sommes au service du savoir.`
   opacity: 0;
 }
 
+.contact-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
 @media (max-width: 768px) {
   .main-content {
     padding: 0 1.5rem;
@@ -298,8 +305,8 @@ Nous sommes au service du savoir.`
 
   .tab-btn {
     padding: 1rem 1rem;
-    font-size: 10px;
-    letter-spacing: 0.12em;
+    font-size: 11px;
+    letter-spacing: 0.1em;
   }
 
   .contact-wrapper {
@@ -308,27 +315,18 @@ Nous sommes au service du savoir.`
 }
 
 @media (max-width: 480px) {
+  .main-content {
+    padding: 0 1rem;
+  }
+
   .tabs-nav {
     padding: 0 3vw;
   }
 
   .tab-btn {
-    padding: 0.9rem 0.7rem;
-    font-size: 9px;
-    letter-spacing: 0.08em;
-  }
-}
-
-.contact-wrapper {
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  border-top: 1px solid #e5e5e5;
-}
-
-@media (max-width: 480px) {
-  .main-content {
-    padding: 0 1rem;
+    padding: 0.9rem 0.6rem;
+    font-size: 11px;
+    letter-spacing: 0.06em;
   }
 
   .contact-wrapper {

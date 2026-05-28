@@ -124,8 +124,13 @@ h2 {
     border-right: none;
     padding-right: 0.5rem;
   }
-  h2 {
-    font-size: 1.4rem;
-  }
+  h2 { font-size: 1.4rem; }
+  .intro, .conclusion { font-size: 1.05rem; }
+}
+
+@media (max-width: 480px) {
+  h2 { font-size: 1.2rem; }
+  .intervention-name { font-size: 1rem; }
+  .intro, .conclusion { font-size: 1rem; }
 }
 </style>
