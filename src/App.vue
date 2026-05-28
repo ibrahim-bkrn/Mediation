@@ -213,7 +213,7 @@ Nous sommes au service du savoir.`
   border: none;
   padding: 1.2rem 1.6rem;
   font-family: 'Poppins', sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -253,6 +253,22 @@ Nous sommes au service du savoir.`
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
+}
+
+.section-deco {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tab-panel {
+  position: relative;
+  z-index: 1;
 }
 
 .tab-panel {
@@ -277,7 +293,29 @@ Nous sommes au service du savoir.`
   }
 
   .tabs-nav {
-    padding: 0 6vw;
+    padding: 0 4vw;
+  }
+
+  .tab-btn {
+    padding: 1rem 1rem;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .contact-wrapper {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs-nav {
+    padding: 0 3vw;
+  }
+
+  .tab-btn {
+    padding: 0.9rem 0.7rem;
+    font-size: 9px;
+    letter-spacing: 0.08em;
   }
 }
 

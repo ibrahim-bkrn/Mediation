@@ -5,7 +5,7 @@
         <span class="nav-identity-name">HABBOUB KAJIOU Imane</span>
         <span class="nav-identity-title">Enseignante chercheuse</span>
       </div>
-      <a href="#hero" class="nav-logo">Deviens.</a>
+      <h2 class="nav-logo">Deviens.</h2>
     </div>
   </header>
 </template>
@@ -71,17 +71,29 @@
   .nav {
     padding: 1.2rem 6vw;
   }
+
+  .nav-identity-name {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
   .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
+    padding: 1rem 5vw;
   }
 
-  .nav-identity {
-    align-items: flex-start;
+  .nav-identity-name {
+    font-size: 10px;
+    letter-spacing: 0.06em;
+  }
+
+  .nav-identity-title {
+    display: none;
   }
 }
 </style>

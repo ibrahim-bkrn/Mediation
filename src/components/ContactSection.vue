@@ -1,5 +1,9 @@
 <template>
   <section id="contact" class="section contact">
+    <svg class="contact-deco" aria-hidden="true" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="300" cy="300" r="280" fill="none" stroke="#a0896a" stroke-width="1" opacity="0.12"/>
+      <circle cx="300" cy="300" r="200" fill="none" stroke="#a0896a" stroke-width="1" opacity="0.07"/>
+    </svg>
     <h2>{{ data.title }}</h2>
     <p class="intro">{{ data.intro }}</p>
     <button class="contact-button" @click="handleContact">Envoyer un message</button>
@@ -12,7 +16,7 @@ defineProps({
 })
 
 const handleContact = () => {
-  window.location.href = 'mailto:?subject=Contact - Médiation et savoir'
+  window.location.href = 'mailto:Imane@deviiiens.fr?subject=Contact - Médiation et savoir'
 }
 </script>
 
@@ -27,18 +31,36 @@ const handleContact = () => {
 
 .contact {
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-deco {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+h2, .intro, .contact-button {
+  position: relative;
+  z-index: 1;
 }
 
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   letter-spacing: -0.01em;
 }
 
 .intro {
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   color: #666666;
   margin-bottom: 2rem;
   line-height: 1.8;

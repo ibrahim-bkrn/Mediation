@@ -1,18 +1,21 @@
 <template>
   <section id="recherche" class="section">
-    <div class="section-header">
-      <span class="section-number">01 —</span>
-      <h2>Une recherche située en Sciences de <br>l'Information et de la Communication</h2>
-    </div>
-
-
-    <div class="section-body">
-      <p>Ce travail s'inscrit dans une approche des Sciences de l'Information et de la Communication attentive aux dispositifs, aux régimes d'énonciation et aux conditions sociales de production du sens.</p>
-
-      <p>Il ne s'agit pas seulement d'analyser les discours, mais de comprendre ce qui les rend possibles : les structures sociales, les cadres institutionnels et les inégalités face au temps, à la parole et à la projection.</p>
-
-      <p class="hypothesis">La recherche repose sur une hypothèse centrale :<br>
-      <em>le sens n'est pas une donnée universelle, mais une construction socialement située.</em></p>
+    <div class="section-layout">
+      <div class="section-left">
+        <div class="section-header">
+          <span class="section-number">01 —</span>
+          <h2>Une recherche située en Sciences de <br>l'Information et de la Communication</h2>
+        </div>
+        <div class="section-body">
+          <p>Ce travail s'inscrit dans une approche des Sciences de l'Information et de la Communication attentive aux dispositifs, aux régimes d'énonciation et aux conditions sociales de production du sens.</p>
+          <p>Il ne s'agit pas seulement d'analyser les discours, mais de comprendre ce qui les rend possibles : les structures sociales, les cadres institutionnels et les inégalités face au temps, à la parole et à la projection.</p>
+          <p class="hypothesis">La recherche repose sur une hypothèse centrale :<br>
+          <em>le sens n'est pas une donnée universelle, mais une construction socialement située.</em></p>
+        </div>
+      </div>
+      <div class="section-right">
+        <img class="section-illustration" src="@/assets/visuels/undraw_researching_49yy.svg" alt="" aria-hidden="true" />
+      </div>
     </div>
   </section>
 </template>
@@ -26,7 +29,26 @@ defineProps({
 <style scoped>
 
 .section {
-  padding: 4vw 0;
+  padding: 7vw 0;
+}
+
+.section-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 5rem;
+  align-items: center;
+}
+
+.section-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.section-illustration {
+  width: 100%;
+  height: auto;
+  opacity: 0.88;
 }
 
 .section-header {
@@ -64,7 +86,7 @@ h2 {
 }
 
 .section-body p {
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   line-height: 1.85;
   color: #1a1a1a;
   margin-bottom: 1.8rem;
@@ -75,7 +97,7 @@ h2 {
 }
 
 .hypothesis {
-  font-size: 1.05rem !important;
+  font-size: 1.3rem !important;
 }
 
 .hypothesis em {
@@ -83,25 +105,30 @@ h2 {
   color: #1a1a1a;
 }
 
+@media (max-width: 900px) {
+  .section-layout {
+    grid-template-columns: 1fr;
+  }
+  .section-right {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 5vw 0;
   }
   h2 {
-    font-size: 1.4rem;
+    font-size: 20px;
   }
   .section-body p {
     font-size: 1.05rem;
-  }
-
-  h2{
-    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .section {
-    padding: 4vw 0;
+    padding: 7vw 0;
   }
   h2 {
     font-size: 1.2rem;

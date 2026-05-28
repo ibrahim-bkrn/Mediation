@@ -4,11 +4,7 @@
       <span class="section-number">06 —</span>
       <h2>Applications et interventions</h2>
     </div>
-
-    <hr class="section-divider" />
-
     <p class="intro">{{ data.intro }}</p>
-
     <div class="interventions">
       <div
         v-for="(item, index) in data.items"
@@ -19,7 +15,6 @@
         <span class="intervention-name">{{ item }}</span>
       </div>
     </div>
-
     <p class="conclusion">{{ data.conclusion }}</p>
   </section>
 </template>
@@ -32,7 +27,7 @@ defineProps({
 
 <style scoped>
 .section {
-  padding: 4vw 0;
+  padding: 7vw 0;
 }
 
 .section-header {
@@ -58,14 +53,8 @@ h2 {
   color: #1a1a1a;
 }
 
-.section-divider {
-  border: none;
-  border-top: 1px solid #e5e5e5;
-  margin-bottom: clamp(2rem, 4vw, 4rem);
-}
-
 .intro {
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   line-height: 1.85;
   color: #1a1a1a;
   max-width: 840px;
@@ -75,6 +64,8 @@ h2 {
 .interventions {
   border-top: 1px solid #e5e5e5;
   margin-bottom: clamp(2rem, 4vw, 4rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .intervention-row {
@@ -84,6 +75,11 @@ h2 {
   padding: 1.2rem 0.5rem;
   border-bottom: 1px solid #e5e5e5;
   transition: background 0.2s ease;
+}
+
+.intervention-row:nth-child(odd) {
+  border-right: 1px solid #e5e5e5;
+  padding-right: 2rem;
 }
 
 .intervention-row:hover {
@@ -101,11 +97,11 @@ h2 {
 
 .intervention-name {
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: clamp(1.2rem, 1.8vw, 1.4rem);
   font-weight: 600;
   color: #1a1a1a;
   flex: 1;
-  transition: color 0.2s ease, font-style 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .intervention-row:hover .intervention-index,
@@ -114,38 +110,22 @@ h2 {
 }
 
 .conclusion {
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   line-height: 1.85;
   color: #666666;
   max-width: 840px;
 }
 
 @media (max-width: 768px) {
-  .section {
-    padding: 5vw 0;
+  .interventions {
+    grid-template-columns: 1fr;
+  }
+  .intervention-row:nth-child(odd) {
+    border-right: none;
+    padding-right: 0.5rem;
   }
   h2 {
     font-size: 1.4rem;
-  }
-  .intro,
-  .conclusion {
-    font-size: 1.05rem;
-  }
-  .intervention-name {
-    font-size: 1.05rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .section {
-    padding: 4vw 0;
-  }
-  h2 {
-    font-size: 1.2rem;
-  }
-  .intro,
-  .conclusion {
-    font-size: 1.05rem;
   }
 }
 </style>

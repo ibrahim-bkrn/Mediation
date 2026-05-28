@@ -4,7 +4,6 @@
       <span class="section-number">05 —</span>
       <h2>Enseignements</h2>
     </div>
-
     <div class="disciplines">
       <div
         v-for="(discipline, index) in data.disciplines"
@@ -15,7 +14,6 @@
         <span class="discipline-name">{{ discipline }}</span>
       </div>
     </div>
-
     <p class="subtitle">{{ data.subtitle }}</p>
   </section>
 </template>
@@ -28,7 +26,7 @@ defineProps({
 
 <style scoped>
 .section {
-  padding: 4vw 0;
+  padding: 7vw 0;
 }
 
 .section-header {
@@ -57,6 +55,8 @@ h2 {
 .disciplines {
   border-top: 1px solid #e5e5e5;
   margin-bottom: clamp(2rem, 4vw, 4rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .discipline-row {
@@ -66,7 +66,12 @@ h2 {
   padding: 1.2rem 0.5rem;
   border-bottom: 1px solid #e5e5e5;
   cursor: default;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease;
+}
+
+.discipline-row:nth-child(odd) {
+  border-right: 1px solid #e5e5e5;
+  padding-right: 2rem;
 }
 
 .discipline-row:hover {
@@ -84,58 +89,35 @@ h2 {
 
 .discipline-name {
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: clamp(1.2rem, 1.8vw, 1.4rem);
   font-weight: 600;
   color: #1a1a1a;
   flex: 1;
-  transition: color 0.2s ease, font-style 0.2s ease;
-}
-
-.discipline-arrow {
-  font-size: 1.05rem;
-  color: #aaaaaa;
-  flex-shrink: 0;
   transition: color 0.2s ease;
 }
 
 .discipline-row:hover .discipline-index,
-.discipline-row:hover .discipline-name,
-.discipline-row:hover .discipline-arrow {
+.discipline-row:hover .discipline-name {
   color: #ffffff;
 }
 
-
 .subtitle {
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   line-height: 1.85;
   color: #666666;
   max-width: 1040px;
 }
 
 @media (max-width: 768px) {
-  .section {
-    padding: 5vw 0;
+  .disciplines {
+    grid-template-columns: 1fr;
+  }
+  .discipline-row:nth-child(odd) {
+    border-right: none;
+    padding-right: 0.5rem;
   }
   h2 {
     font-size: 1.4rem;
-  }
-  .subtitle {
-    font-size: 1.05rem;
-  }
-  .discipline-name {
-    font-size: 1.05rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .section {
-    padding: 4vw 0;
-  }
-  h2 {
-    font-size: 1.2rem;
-  }
-  .subtitle {
-    font-size: 1.05rem;
   }
 }
 </style>
