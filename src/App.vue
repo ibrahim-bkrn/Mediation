@@ -17,6 +17,7 @@
       </button>
     </nav>
 
+
     <main class="main-content">
       <Transition name="tab-fade" mode="out-in">
         <div :key="activeTab" class="tab-panel">
@@ -294,24 +295,36 @@ Nous sommes au service du savoir.`
   border-top: 1px solid #e5e5e5;
 }
 
+.option-c {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .main-content {
     padding: 0 1.5rem;
   }
 
   .tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: visible;
     padding: 0 4vw;
+    border-bottom: 1px solid #e5e5e5;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .tab-btn {
     padding: 1rem 1rem;
     font-size: 11px;
     letter-spacing: 0.1em;
+    white-space: normal;
   }
 
   .contact-wrapper {
     padding: 0 1.5rem;
   }
+
 }
 
 @media (max-width: 480px) {

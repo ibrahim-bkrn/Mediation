@@ -1,48 +1,50 @@
 <template>
   <section id="hero" class="hero" role="main">
-    <!-- cercles haut droite -->
-    <svg class="hero-deco hero-deco--tr" aria-hidden="true" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="540" cy="80" r="180" fill="none" stroke="#a0896a" stroke-width="1" opacity="0.15"/>
-      <circle cx="540" cy="80" r="100" fill="none" stroke="#1e3a5f" stroke-width="1" opacity="0.1"/>
-    </svg>
-    <!-- arc bas gauche -->
-    <svg class="hero-deco hero-deco--bl" aria-hidden="true" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="0" cy="400" r="220" fill="none" stroke="#1e3a5f" stroke-width="1" opacity="0.08"/>
-      <circle cx="0" cy="400" r="140" fill="none" stroke="#a0896a" stroke-width="1" opacity="0.12"/>
-    </svg>
-    <h1 class="hero-title" aria-label="Médiation, savoir et transformation des interactions">
-      <span class="line"><span>Médiation, savoir</span></span>
-      <span class="line"><span>et transformation des interactions</span></span>
-      <span class="line"><span></span></span>
-    </h1>
+    <div class="tel-hero">
+      <!-- cercles haut droite -->
+      <svg class="hero-deco hero-deco--tr" aria-hidden="true" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="540" cy="80" r="180" fill="none" stroke="#a0896a" stroke-width="1" opacity="0.15"/>
+        <circle cx="540" cy="80" r="100" fill="none" stroke="#1e3a5f" stroke-width="1" opacity="0.1"/>
+      </svg>
+      <!-- arc bas gauche -->
+      <svg class="hero-deco hero-deco--bl" aria-hidden="true" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="0" cy="400" r="220" fill="none" stroke="#1e3a5f" stroke-width="1" opacity="0.08"/>
+        <circle cx="0" cy="400" r="140" fill="none" stroke="#a0896a" stroke-width="1" opacity="0.12"/>
+      </svg>
+      <h1 class="hero-title" aria-label="Médiation, savoir et transformation des interactions">
+        <span class="line"><span>Médiation, savoir</span></span>
+        <span class="line"><span>et transformation des interactions</span></span>
+        <span class="line"><span></span></span>
+      </h1>
 
-    <div class="hero-identity" aria-label="Identité de l'enseignante">
-      <div class="hero-identity-name-row">
-        <span class="hero-identity-name">Imane HABBOUB KAJIOU</span>
-        <svg class="hero-deco-name" aria-hidden="true" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="2" fill="#1a1a1a" opacity="0.3"/>
-          <circle cx="60" cy="10" r="1.5" fill="#1a1a1a" opacity="0.25"/>
-          <circle cx="100" cy="30" r="2" fill="#1a1a1a" opacity="0.2"/>
-          <circle cx="140" cy="15" r="1.5" fill="#1a1a1a" opacity="0.3"/>
-          <circle cx="180" cy="40" r="2.5" fill="#1a1a1a" opacity="0.15"/>
-          <line x1="20" y1="20" x2="60" y2="10" stroke="#1a1a1a" stroke-width="0.5" opacity="0.15"/>
-          <line x1="60" y1="10" x2="100" y2="30" stroke="#1a1a1a" stroke-width="0.5" opacity="0.15"/>
-          <line x1="100" y1="30" x2="140" y2="15" stroke="#1a1a1a" stroke-width="0.5" opacity="0.15"/>
-          <line x1="140" y1="15" x2="180" y2="40" stroke="#1a1a1a" stroke-width="0.5" opacity="0.15"/>
-        </svg>
+      <div class="hero-identity" aria-label="Identité de l'enseignante">
+        <div class="hero-identity-name-row">
+          <span class="hero-identity-name">Imane HABBOUB KAJIOU</span>
+          <svg class="hero-deco-name" aria-hidden="true" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="2" fill="#1a1a1a" opacity="0.3"/>
+            <circle cx="60" cy="10" r="1.5" fill="#1a1a1a" opacity="0.25"/>
+            <circle cx="100" cy="30" r="2" fill="#1a1a1a" opacity="0.2"/>
+            <circle cx="140" cy="15" r="1.5" fill="#1a1a1a" opacity="0.3"/>
+            <circle cx="180" cy="40" r="2.5" fill="#1a1a1a" opacity="0.15"/>
+            <line x1="20" y1="20" x2="60" y2="10" stroke="#1a1a1a" stroke-width="0.5" opacity="0.15"/>
+            <line x1="60" y1="10" x2="100" y2="30" stroke="#1a1a1a" stroke-width="0.5" opacity="0.15"/>
+            <line x1="100" y1="30" x2="140" y2="15" stroke="#1a1a1a" stroke-width="0.5" opacity="0.15"/>
+            <line x1="140" y1="15" x2="180" y2="40" stroke="#1a1a1a" stroke-width="0.5" opacity="0.15"/>
+          </svg>
+        </div>
+        <span class="hero-identity-title">Enseignante chercheuse, doctorat en science de l'information et de la communication</span>
       </div>
-      <span class="hero-identity-title">Enseignante chercheuse, doctorat en science de l'information et de la communication</span>
+
+      <div class="hero-subtitle-wrapper">
+        <a href="mailto:Imane@deviiiens.fr?subject=Contact - Deviens." class="hero-cta">Prendre contact</a>
+        <p class="hero-subtitle">
+          Nous sommes au service du savoir.<br>
+          Le savoir est une exigence,<br>
+          une médiation et une responsabilité.
+        </p>
+      </div>
     </div>
 
-    <div class="hero-subtitle-wrapper">
-      <a href="mailto:Imane@deviiiens.fr?subject=Contact - Deviens." class="hero-cta">Prendre contact</a>
-      <p class="hero-subtitle">
-        Nous sommes au service du savoir.<br>
-        Le savoir est une exigence,<br>
-        une médiation et une responsabilité.
-      </p>
-    </div>
-    
     <p class="hero-intro">{{ data.intro }}</p>
   </section>
 </template>
@@ -247,11 +249,19 @@ defineProps({
 
 @media (max-width: 768px) {
   .hero {
-    padding: 10vw 6vw 8vw;
+    padding: 0 6vw;
+  }
+
+  .tel-hero {
+    min-height: 90dvh;
+    min-height: var(--vh, 100dvh);
+    display: flex;
+    flex-direction: column;
   }
 
   .hero-title {
     letter-spacing: -0.02em;
+    padding-top: 10vh;
   }
 
   .hero-deco--tr,
@@ -267,12 +277,14 @@ defineProps({
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    padding-top: 2.5rem;
   }
 
   .hero-subtitle {
     text-align: left;
-    font-size: 13px;
+    font-size: 14px !important;
     letter-spacing: 0.12em;
+
   }
 
   .hero-cta {
@@ -282,12 +294,19 @@ defineProps({
 
   .hero-intro {
     font-size: 1.1rem;
+    padding-bottom: 10vh;
+    padding-top: -50px;
+    max-width: 95%;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 10vw 5vw 6vw;
+    padding: 0 5vw;
+  }
+
+  .tel-hero {
+    padding: 10vw 0 8vw;
   }
 
   .hero-title {
@@ -301,10 +320,6 @@ defineProps({
   .hero-identity-title {
     font-size: 10px;
     letter-spacing: 0.08em;
-  }
-
-  .hero-subtitle-wrapper {
-    margin-top: clamp(2.5rem, 6vw, 5rem);
   }
 
   .hero-subtitle {

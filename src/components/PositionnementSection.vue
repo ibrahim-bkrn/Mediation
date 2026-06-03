@@ -115,9 +115,25 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  .section-right {
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+  }
+  .section-illustration {
+    width: 90%;
+    opacity: 0.75;
+  }
+}
+
+@media (max-width: 768px) {
   .section-body p {
     font-size: 1.05rem;
   }
+
+  .hypothesis {
+  font-size: 1rem !important;
+}
 }
 
 @media (max-width: 480px) {

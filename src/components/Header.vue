@@ -2,10 +2,10 @@
   <header class="header">
     <div class="nav">
       <div class="nav-identity">
-        <span class="nav-identity-name">HABBOUB KAJIOU Imane</span>
+        <span class="nav-identity-name">Imane HABBOUB KAJIOU</span>
         <span class="nav-identity-title">Enseignante chercheuse</span>
       </div>
-      <h2 class="nav-logo">Deviens.</h2>
+      <h2 class="nav-logo">Deviiiens.</h2>
     </div>
   </header>
 </template>
@@ -93,7 +93,8 @@
   }
 
   .nav-identity-title {
-    display: none;
+    font-size: 9px;
+    letter-spacing: 0.06em;
   }
 }
 </style>
